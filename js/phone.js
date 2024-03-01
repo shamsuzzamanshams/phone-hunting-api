@@ -42,15 +42,30 @@ const displayPhone = phones => {
         </div>
         `
         phoneContainer.appendChild(phoneCard);
-    })
+    });
+    // hide loading spinner
+    toggoleLoadingSpinner(false);
 }
 
 //search phone 
 const handelSearch = () =>{
+    toggoleLoadingSpinner(true)
     const searchfield = document.getElementById('searchfield');
     const searchText = searchfield.value;
     console.log(searchText);
     loadPhone(searchText);
+}
+
+// loading-spinner
+
+const toggoleLoadingSpinner = (isLoading) =>{
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden');
+    }
+    else{
+        loadingSpinner.classList.add('hidden');
+    }
 }
 
 // loadPhone();
