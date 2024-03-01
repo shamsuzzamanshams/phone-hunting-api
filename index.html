@@ -27,10 +27,27 @@
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             </div>
             <!-- show all button -->
-            <div id="show-all-container" class="hidden">
+            <div onclick="handelShowAll()" id="show-all-container" class="hidden text-center my-8">
                 <button class="btn btn-accent">Show All</button>
 
             </div>
+            <!-- modal -->
+
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h3 id="show-details-phone-name" class="font-bold text-3xl"></h3>
+                    <div id="show-details-container">
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </section>
     </main>
     <footer>
